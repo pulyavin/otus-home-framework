@@ -1,0 +1,19 @@
+{
+    "name": "otus/home-framework",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Artemiy Pulyavin",
+            "email": "artemiy@pulyavin.ru"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "php-di/php-di": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Otus\\": "src"
+        }
+    }
+}
