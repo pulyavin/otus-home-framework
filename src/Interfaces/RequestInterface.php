@@ -10,7 +10,7 @@ interface RequestInterface
      * @param string $key
      * @param string|null $default
      *
-     * @return string
+     * @return string|null
      */
-    public function getParam(string $key, string $default = null): string;
+    public function getParam(string $key, string $default = null): ?string;
 }
