@@ -2,6 +2,8 @@
 
 namespace Otus\Interfaces;
 
+use Otus\Exceptions\ControllerNotFoundException;
+
 interface ControllerFactoryInterface
 {
     /**
@@ -10,6 +12,8 @@ interface ControllerFactoryInterface
      * @param RequestInterface $request
      *
      * @return ControllerInterface
+     *
+     * @throws ControllerNotFoundException
      */
     public function getController(RequestInterface $request): ControllerInterface;
 }
