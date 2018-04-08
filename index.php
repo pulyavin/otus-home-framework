@@ -8,7 +8,13 @@ $request = $requestBuilder->getRequest($_GET, $_POST);
 
 $controllerFactory = $container->get(Otus\Interfaces\ControllerFactoryInterface::class);
 
-$controller = $controllerFactory->getController($request);
+try {
+    $controller = $controllerFactory->getController($request);
+} catch (Otus\Exceptions\ControllerNotFoundException $e) {
+    header('HTTP/1.1 404 Not Found');
+    print('404 Not Found');
+    exit;
+}
 
 $response = $controller->execute($request);
 
